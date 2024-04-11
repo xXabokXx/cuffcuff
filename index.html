@@ -1,87 +1,42 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Useless Color Generator</title>
-  </head>
-  <body style="background-color: {color};">
-    <h1>Useless Color Generator</h1>
-    <p>Refresh the page to get a new random color!</p>
-    <div style="width: 200px; height: 200px; margin: auto; background-color: {color};"></div>
-    <p>Color: <span id="color-name"></span></p>
-    <script>
-      function getRandomColor() {
-        const letters = '0123456789ABCDEF';
-        let color = '#';
-        for (let i = 0; i < 6; i++) {
-          color += letters[Math.floor(Math.random() * 16)];
-        }
-        return color;
-      }
-
-      function getColorName(color) {
-        const names = [
-          ['#FF69B4', 'Pink'],
-          ['#FF1493', 'Deep Pink'],
-          ['#C71585', 'Medium Violet Red'],
-          ['#FF7F50', 'Coral'],
-          ['#FF6347', 'Tomato'],
-          ['#FF4500', 'Orange Red'],
-          ['#FFA07A', 'Light Salmon'],
-          ['#FFA500', 'Orange'],
-          ['#FF8C00', 'Dark Orange'],
-          ['#FFD700', 'Gold'],
-          ['#DAA520', 'Goldenrod'],
-          ['#B8860B', 'Dark Goldenrod'],
-          ['#FFFF00', 'Yellow'],
-          ['#9ACD32', 'Yellow Green'],
-          ['#808000', 'Olive'],
-          ['#ADFF2F', 'Green Yellow'],
-          ['#00FF00', 'Lime'],
-          ['#00FF7F', 'Spring Green'],
-          ['#008000', 'Green'],
-          ['#008080', 'Teal'],
-          ['#0000FF', 'Blue'],
-          ['#4169E1', 'Royal Blue'],
-          ['#ADD8E6', 'Light Blue'],
-          ['#87CEEB', 'Sky Blue'],
-          ['#87CEFA', 'Light Sky Blue'],
-          ['#000080', 'Navy'],
-          ['#0000CD', 'Medium Blue'],
-          ['#1E90FF', 'Dodger Blue'],
-          ['#00BFFF', 'Deep Sky Blue'],
-          ['#4682B4', 'Steel Blue'],
-          ['#6495ED', 'Cornflower Blue'],
-          ['#FF00FF', 'Magenta'],
-          ['#8B00FF', 'Dark Magenta'],
-          ['#FF0080', 'Hot Pink'],
-          ['#DB7093', 'Pale Violet Red'],
-          ['#FFB6C1', 'Light Pink'],
-          ['#F08080', 'Light Coral'],
-          ['#E6E6FA', 'Lavender'],
-          ['#FFF0F5', 'Lavender Blush'],
-          ['#F5F5DC', 'Beige'],
-          ['#FFFFF0', 'Ivory'],
-          ['#FAF0E6', 'Linen'],
-          ['#FFFFE0', 'Light Yellow'],
-          ['#F0FFF0', 'Honeydew'],
-          ['#E0FFFF', 'Light Cyan'],
-          ['#F0FFFF', 'Azure'],
-          ['#F5F5F5', 'White Smoke'],
-          ['#FFFFFF', 'White'],
-        ];
-
-        for (let i = 0; i < names.length; i++) {
-          if (names[i][0] === color) {
-            return names[i][1];
-          }
-        }
-
-        return 'Unknown';
-      }
-
-      const color = getRandomColor();
-      document.body.style.backgroundColor = color;
-      document.getElementById('color-name').textContent = getColorName(color);
-    </script>
-  </body>
+<head>
+  <title>Advanced Website</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+    .header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+    }
+    .content {
+      margin: 20px;
+    }
+    .footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>Advanced Website</h1>
+  </div>
+  <div class="content">
+    <h2>Welcome to our advanced website!</h2>
+    <p>Here you will find all sorts of cool features and functionalities that will make your browsing experience a joy.</p>
+  </div>
+  <div class="footer">
+    <p>Copyright © 2023 Advanced Website. All rights reserved.</p>
+  </div>
+</body>
 </html>
